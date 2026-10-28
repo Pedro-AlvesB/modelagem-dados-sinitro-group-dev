@@ -22,5 +22,10 @@ Para eles virarem uma tabela associativa é suposto você criar uma tabela nova,
 ## normalização: o que é, qual problema resolve e o que caracteriza 1FN, 2FN e 3FN
 A normalização classifica as informações, fazendo com que uma base de dados seja fácil de administrar e manter
 
-1FN assegura que não haja informações repetidas em uma tabela e organiza os dados em grupos lógicos.
+1FN, exige atributos atômicos, e a ausência de grupos repetitivos ou multivalorados. 2FN, exige que deve estar na 1FN e elimina dependências parciais. Isso ai ocorre quando a tabela possui uma chave primária composta. 3FN, exige da mesma forma que deve estar no 2FN e elimina as dependências transitivas. Isso é, um atributo não chave não pode depender de outro atributo que também NÃO SEJA chave, todos os campos DEVEM depender de uma chave primária só.
 
+## tipos de dados e restrições no MySQL vistos em Linguagens de Servidor (INT, VARCHAR, DATE, DECIMAL, NOT NULL, UNIQUE, AUTO_INCREMENT)
+
+INT armazena numeros inteiros, sem casa decimal. VARCHAR armazena texto com comprimento variavel. DECIMAL armazena números com casas decimais, definindo quantas casas decimais quer
+
+NOT NULL impede que a coluna receba valores nulos ou vazios, vira obrigatório. UNIQUE garante que qualquer valor inserido ali vai ser UNICO e não pode ser repetido ou duplicado. AUTO_INCREMENT faz com que o MYSQL gere automaticamente um valor sequencial e unico a cada nova linha colocada na tabela.
